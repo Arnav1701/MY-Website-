@@ -1,9 +1,59 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
 }
 
-h1 {
-    color: #333;
+/* Heading Animation */
+#title {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s forwards;
+    transition: all 0.3s ease;
+}
+
+#title:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Message Box */
+#message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffeb3b;
+    border: 1px solid #ffc107;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
